@@ -1,0 +1,17 @@
+{"id":1,"kind":"section","level":1,"title":"登录与进入系统","summary":"打开后台地址并登录，进入书架管理页","note":"","ts":"2026-01-15T02:00:01.000Z"}
+{"id":2,"kind":"section","level":2,"title":"账号密码登录","summary":"用管理员账号完成登录","note":"","ts":"2026-01-15T02:00:02.000Z"}
+{"id":3,"kind":"section","level":3,"title":"登录页","summary":"输入账号与密码后提交","note":"","ts":"2026-01-15T02:00:03.000Z"}
+{"id":4,"kind":"note","title":"前置条件","note":"拥有一个「图书管理员」角色的演示账号（示例账号 admin / 示例密码不随示例分发）。示例站点 demo.example.invalid 为保留域名（RFC 2606），不指向任何真实系统。","ts":"2026-01-15T02:00:04.000Z"}
+{"id":5,"kind":"goto","title":"打开登录页","note":"浏览器访问后台地址，页面展示账号、密码输入框与登录按钮。","url":"https://demo.example.invalid/#/login","shots":{"after":"assets/shot-001-login.png"},"ts":"2026-01-15T02:00:05.000Z"}
+{"id":6,"kind":"fill","title":"输入账号","note":"在账号输入框填写演示账号 admin。","selector":"#username","value":"admin","shots":{"after":"assets/shot-002-username.png"},"ts":"2026-01-15T02:00:06.000Z"}
+{"id":7,"kind":"fill","title":"输入密码","note":"在密码输入框填写演示密码（本示例不展示真实密码）。","selector":"#password","value":"********","shots":{"after":"assets/shot-003-password.png"},"ts":"2026-01-15T02:00:07.000Z"}
+{"id":8,"kind":"click","title":"提交登录","note":"点击「登录」按钮（写操作入口，示例中仅演示，不实际提交）。登录成功后跳转书架列表页，左侧显示主导航。","selector":"button[type=submit]","shots":{"after":"assets/shot-004-after-login.png"},"ts":"2026-01-15T02:00:08.000Z"}
+{"id":9,"kind":"section","level":1,"title":"图书管理","summary":"在书架列表中查询与维护图书","note":"","ts":"2026-01-15T02:00:09.000Z"}
+{"id":10,"kind":"section","level":2,"title":"图书查询","summary":"按书名关键字筛选图书","note":"","ts":"2026-01-15T02:00:10.000Z"}
+{"id":11,"kind":"section","level":3,"title":"书架列表页","summary":"查询区与图书表格","note":"","ts":"2026-01-15T02:00:11.000Z"}
+{"id":12,"kind":"shot","title":"书架列表页关键元素：查询框、表格、新增按钮","note":"① 顶部书名关键字查询框；② 图书表格展示书名/作者/分类；③ 右上角「新增图书」按钮打开新建表单。","marks":[{"box":{"x":60,"y":90,"w":300,"h":40},"color":"#e11d48","found":true,"inView":true,"label":"书名查询框","selector":"#keyword"},{"box":{"x":60,"y":180,"w":1080,"h":320},"color":"#ea580c","found":true,"inView":true,"label":"图书表格","selector":".book-table"},{"box":{"x":980,"y":90,"w":160,"h":40},"color":"#2563eb","found":true,"inView":true,"label":"新增图书按钮","selector":"text=新增图书"}],"shots":{"after":"assets/shot-005-list-marked.png"},"ts":"2026-01-15T02:00:12.000Z"}
+{"id":13,"kind":"fill","title":"输入书名关键字","note":"在查询框输入『算法』，点击查询后表格仅显示书名包含该关键字的记录。","selector":"#keyword","value":"算法","shots":{"after":"assets/shot-006-filter.png"},"ts":"2026-01-15T02:00:13.000Z"}
+{"id":14,"kind":"section","level":2,"title":"新增图书","summary":"打开表单并填写图书信息","note":"","ts":"2026-01-15T02:00:14.000Z"}
+{"id":15,"kind":"section","level":3,"title":"新增图书表单","summary":"填写书名、作者、分类后保存","note":"","ts":"2026-01-15T02:00:15.000Z"}
+{"id":16,"kind":"click","title":"打开新增表单","note":"点击「新增图书」按钮，弹出对话框，含书名、作者、分类三个必填项与「取消 / 保存」按钮。","selector":"text=新增图书","shots":{"after":"assets/shot-007-new-dialog.png"},"ts":"2026-01-15T02:00:16.000Z"}
+{"id":17,"kind":"note","title":"安全提示","note":"「保存」为写操作，录制阶段默认不点击（危险动作闸门会拦截）；正式执行时需用户明确授权。","ts":"2026-01-15T02:00:17.000Z"}

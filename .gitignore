@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# local recording runs (may contain private data — never commit real ones)
+/playbook-runs/
+
+# internal helper artifacts
+.playbook-internal/
+*.preview.html
+*.mmd
+*.index.json
+
+# logs
+*.log
+.chk-logs/
+
+# node
+node_modules/
+npm-debug.log*
+
+# backups
+*.bak*
